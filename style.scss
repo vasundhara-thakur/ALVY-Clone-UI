@@ -316,7 +316,7 @@ main{
         @include flex-property(3.5rem);
         @include bottom();
 
-        & > p{
+         p{
            text-transform: uppercase; 
         }
 

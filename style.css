@@ -291,7 +291,7 @@ main .view6 .bottom {
   background-color: rgb(34, 34, 34);
   border-radius: 10px;
 }
-main .view6 .bottom > p {
+main .view6 .bottom p {
   text-transform: uppercase;
 }
 main .view6 .bottom .text {
