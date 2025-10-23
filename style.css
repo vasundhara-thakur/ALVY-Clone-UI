@@ -1,39 +1,73 @@
+@font-face {
+  font-family: Regular-font;
+  src: url(./font/63cffc0a3942456e003bc265_Chillax-Regular.woff);
+}
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-html.body {
+html, body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  font-family: Helvetica, sans-serif;
+  font-family: Regular-font;
+}
+
+body {
+  color: rgb(223, 221, 221);
+  background-color: rgb(19, 18, 18);
+}
+
+section {
+  max-width: 2000px;
 }
 
 main {
   width: 100%;
-  color: rgb(223, 221, 221);
   display: flex;
   flex-direction: column;
   gap: 0;
-  background-color: rgb(19, 18, 18);
+  align-items: center;
 }
-main section {
+main header {
+  width: 100%;
+  padding: 1rem;
+}
+main header .navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+main header .navbar h1 {
+  text-transform: uppercase;
+  font-weight: 100;
+}
+main header .navbar .toggle i {
+  font-size: 1.8rem;
+}
+main header .navbar ul {
+  display: none;
+}
+main header .navbar ul li:last-child {
+  display: inline;
+}
+main .view1 {
   width: 100%;
   display: flex;
   flex-direction: column;
   gap: 1rem;
   padding: 1rem;
 }
-main .top {
+main .view1 .top {
   width: 100%;
 }
-main .top img {
+main .view1 .top img {
   width: 100%;
   border-radius: 10px;
 }
-main .bottom {
+main .view1 .bottom {
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -41,26 +75,26 @@ main .bottom {
   background-color: rgb(34, 34, 34);
   border-radius: 10px;
 }
-main .bottom > p {
+main .view1 .bottom > p {
   text-transform: uppercase;
 }
-main .bottom .text {
+main .view1 .bottom .text {
   display: flex;
   flex-direction: column;
   gap: 0.7 rem;
 }
-main .bottom .text h1 {
+main .view1 .bottom .text h1 {
   font-weight: 200;
   font-size: 2.5rem;
   text-transform: uppercase;
 }
-main .bottom .text p {
+main .view1 .bottom .text p {
   opacity: 0.5;
   font-weight: 300;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   line-height: 1.5;
 }
-main .bottom .text button {
+main .view1 .bottom .text button {
   width: -moz-fit-content;
   width: fit-content;
   margin-top: 1.5rem;
@@ -70,31 +104,467 @@ main .bottom .text button {
   color: rgb(223, 221, 221);
   text-transform: uppercase;
 }
-main .bottom .text button i {
+main .view1 .bottom .text button i {
   border: 1px solid white;
   border-radius: 50%;
   padding: 0.5rem;
   background-color: #363636;
 }
+main .view2 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+main .view2 .left, main .view2 .right {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+main .view3 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .view3 img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .view3 .bottom {
+  padding: 1.75rem;
+  background-color: rgb(34, 34, 34);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+main .view3 .bottom > p {
+  text-transform: uppercase;
+}
+main .view3 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+main .view3 .bottom .text h1 {
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+main .view3 .bottom .text p {
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+main .view4 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .view4 img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .view4 .bottom {
+  padding: 1.75rem;
+  background-color: rgb(34, 34, 34);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+}
+main .view4 .bottom > p {
+  text-transform: uppercase;
+}
+main .view4 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: space-between;
+}
+main .view4 .bottom .text h1 {
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+main .view4 .bottom .text p {
+  opacity: 0.5;
+  font-weight: 300;
+  font-size: 1.2rem;
+  line-height: 1.5;
+}
+main .team {
+  align-self: flex-start;
+  padding: 1rem;
+}
+main .team h1 {
+  text-transform: uppercase;
+}
+main .view5 {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+main .view5 .card1 {
+  background-image: url(./images/team1.webp);
+  background-size: cover;
+}
+main .view5 .card2 {
+  background-image: url(./images/team2.webp);
+  background-size: cover;
+}
+main .view5 .card3 {
+  background-image: url(./images/team3.webp);
+  background-size: cover;
+}
+main .view5 .card {
+  width: 100%;
+  aspect-ratio: 1/1;
+  display: flex;
+  flex-direction: column;
+  gap: 0rem;
+  border-radius: 0.7rem;
+  justify-content: space-between;
+  padding: 1rem;
+}
+main .view5 .card .icon, main .view5 .card .card-bottom {
+  background-color: rgba(122, 122, 122, 0.375);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 0.5px solid rgba(190, 188, 188, 0.425);
+  border-radius: 0.5rem;
+}
+main .view5 .card .card-top {
+  display: flex;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+main .view5 .card .icon {
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+main .view5 .card .card-bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+}
+main .view5 .card .card-bottom p {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+main .view6 {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+}
+main .view6 .top {
+  width: 100%;
+}
+main .view6 .top img {
+  width: 100%;
+  border-radius: 10px;
+}
+main .view6 .bottom {
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  padding: 1.75rem;
+  background-color: rgb(34, 34, 34);
+  border-radius: 10px;
+}
+main .view6 .bottom > p {
+  text-transform: uppercase;
+}
+main .view6 .bottom .text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.7 rem;
+}
+main .view6 .bottom .text h1 {
+  font-weight: 200;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+}
+main .view6 .bottom button {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin-top: 1.5rem;
+  border: none;
+  border-radius: 5px;
+  background-color: transparent;
+  color: rgb(223, 221, 221);
+  text-transform: uppercase;
+}
+main .view6 .bottom button i {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.5rem;
+  background-color: #363636;
+}
+main .view7 {
+  width: 100%;
+  padding: 1rem;
+}
+main .view7 .Contact {
+  background-color: #cebd63;
+  color: #111;
+  padding: 2rem;
+  border-radius: 1rem;
+  text-transform: uppercase;
+}
+main .view7 .Contact button {
+  padding: 1rem;
+  white-space: nowrap;
+  border-radius: 1rem;
+  color: #fff;
+  background-color: #111;
+  border: none;
+  font-size: large;
+  font-weight: 200;
+}
+main footer {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main footer .aside {
+  background-color: #363636;
+  text-transform: uppercase;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main footer .aside .aside-bottom {
+  display: flex;
+  gap: 0.5rem;
+  padding-top: 1rem;
+}
+main footer .aside .aside-bottom .icon {
+  background-color: rgba(122, 122, 122, 0.375);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
+  border: 0.5px solid rgba(190, 188, 188, 0.425);
+  border-radius: 0.5rem;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem;
+  border-radius: 50%;
+}
+main footer .section-top {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-transform: uppercase;
+  background-color: #363636;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+main footer .section-top h3 {
+  margin-top: 1rem;
+}
+main footer .section-top p {
+  font-weight: 100;
+  margin: 1rem 0;
+  color: rgba(255, 255, 255, 0.5254901961);
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+}
+main footer .section-top button {
+  background-color: #cebd63;
+  color: #111;
+  border: none;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+}
+main footer .section-bottom {
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande", "Lucida Sans", Arial, sans-serif;
+  background-color: #363636;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: rgba(255, 255, 255, 0.4235294118);
+}
+main footer .section-bottom span {
+  text-decoration: underline;
+  color: #fff;
+}
 
-@media (min-width: 600px) {
+@media (min-width: 900px) {
   body {
     font-size: 18px;
   }
-  main section {
+  main header .toggle {
+    display: none;
+  }
+  main header .navbar ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 100;
+    font-size: 1rem;
+  }
+  main header .navbar ul a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    background-color: #363636;
+    text-transform: uppercase;
+  }
+  main header .navbar ul a span {
+    background-color: #cebd63;
+    color: #111;
+    padding: 0rem 0.3rem;
+    width: 0.3rem;
+    border-radius: 50%;
+  }
+  main header .navbar ul button {
+    border: none;
+    padding: 0.8rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background-color: #cebd63;
+    color: #111;
+    text-transform: uppercase;
+  }
+  main .view1 {
     flex-direction: row;
   }
-  main section .top {
+  main .view1 .top {
     width: 50%;
   }
-  main section .bottom {
+  main .view1 .bottom {
     width: 50%;
     justify-content: space-between;
     padding: 2.5rem;
   }
-  main section .bottom h1 {
+  main .view1 .bottom h1 {
     font-size: 1rem;
     font-weight: 400;
     line-height: 120%;
+  }
+  main .view2 {
+    flex-direction: row;
+  }
+  main .view3 {
+    flex-direction: row-reverse;
+  }
+  main .view3 .top, main .view3 .bottom {
+    width: 50%;
+  }
+  main .view3 .bottom {
+    justify-content: space-between;
+  }
+  main .view3 .bottom .paragraph {
+    display: flex;
+    gap: 2rem;
+  }
+  main .view4 {
+    flex-direction: row;
+  }
+  main .view4 .top, main .view4 .bottom {
+    width: 50%;
+  }
+  main .view4 .bottom {
+    justify-content: space-between;
+  }
+  main .view4 .bottom .paragraph {
+    display: flex;
+    gap: 2rem;
+  }
+  main .team {
+    padding-left: 2rem;
+  }
+  main .view5 {
+    flex-direction: row;
+  }
+  main .view6 {
+    flex-direction: row;
+  }
+  main .view6 .top {
+    width: 50%;
+  }
+  main .view6 .bottom {
+    width: 50%;
+    justify-content: space-between;
+    padding: 2.5rem;
+  }
+  main .view6 .bottom h1 {
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 120%;
+  }
+  main .view7 .Contact {
+    display: flex;
+    align-items: flex-end;
+    gap: 2rem;
+  }
+  main .view7 .Contact h1 {
+    font-size: 5rem;
+    font-weight: 200;
+  }
+  main .view7 .Contact .bottom {
+    background-color: transparent;
+  }
+  main .view7 .Contact .bottom button {
+    padding: 1rem;
+    white-space: nowrap;
+    border-radius: 1rem;
+  }
+  main footer {
+    width: 100%;
+    height: 80vh;
+    padding: 1rem;
+    border-radius: 1rem;
+    grid-gap: 0.7rem;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 3.5fr 0.5fr;
+    grid-template-areas: "aside section-top" "aside section-bottom";
+  }
+  main footer .aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    gap: 0rem;
+    justify-content: space-between;
+    background-color: #363636;
+    text-transform: uppercase;
+  }
+  main footer .aside .aside-bottom {
+    display: flex;
+    justify-content: flex-end;
+  }
+  main footer .section-top {
+    grid-area: section-top;
+    flex-direction: row;
+    justify-content: space-around;
+    text-transform: uppercase;
+    background-color: #363636;
+  }
+  main footer .section-top p {
+    font-weight: 200;
+    opacity: 0.7;
+  }
+  main footer .section-bottom {
+    grid-area: section-bottom;
+    background-color: #363636;
+    text-align: left;
+    text-transform: uppercase;
   }
 }/*# sourceMappingURL=style.css.map */
